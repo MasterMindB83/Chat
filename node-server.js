@@ -149,8 +149,6 @@ io.on('connection',(socket) => {
     socket.on('join',(data) => {
         socket.join(data.user);
         users[socket.id]=data.user;
-        console.log(socket.id);
-        console.log(users[socket.id]);
     });
     socket.on('typing',(data) => {
         io.in(data.to).emit('typing',data);
