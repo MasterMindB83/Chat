@@ -1,0 +1,17 @@
+<div>
+  <table>
+    <tr>
+      <td>Username:</td>
+      <td><input [(ngModel)]="username" type="text" (keydown)="keyDown($event)"> </td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td> <input [(ngModel)]="password" type="password" (keydown)="keyDown($event)"> </td>
+    </tr>
+</table>
+<button (click)="login()">Login</button>
+</div>
+<br>
+<div>
+  <span routerLink="adduser">Register Up</span>
+</div>

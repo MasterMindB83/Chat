@@ -1,0 +1,54 @@
+.border-left-right{
+    border-left:  1px solid black;
+    border-right:  1px solid black;
+}
+.user{
+    background-color: blue;
+    color: white;
+    margin-left: 100px;
+    border-left:  1px solid black;
+    border-right:  1px solid black;
+    border-top:  1px solid black;
+    border-bottom:  1px solid black;
+    width: 290px;
+}
+.not-user{
+    background-color: grey;
+    border-left:  1px solid black;
+    border-right:  1px solid black;
+    border-top:  1px solid black;
+    border-bottom:  1px solid black;
+    width: 290px;
+
+}
+.chat{
+    width: 400px;
+    height: 600px;
+    background-color: #dddddd;
+}
+.width{
+    width: 350px;
+}
+.green{
+    background-color: blue;
+    color: white;
+}
+.pading-left{
+    
+    padding-left: 200px; 
+}
+.padding{
+    float:right;
+}
+.width-400{
+    width:400px;
+}
+.typing{
+    margin-left:150px;
+}
+.seen{
+    text-align: right;
+}
+.users{
+    vertical-align: top;
+}

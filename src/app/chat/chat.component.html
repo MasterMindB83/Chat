@@ -1,0 +1,53 @@
+<div class="pading-left" (close)="ngOnDestroy()">
+  <br>
+  <br>
+  <div class = "width-400">
+      <select [(ngModel)]="to_user" (click)="userToSelected()">
+        <option></option>
+        <option *ngFor="let user1 of users" value="{{user1.username}}">{{user1.newMessage?user1.name + ' new':user1.name}}</option>
+      </select>
+      <img *ngIf="newMessage" src="/assets/new message.jpg" class="padding">
+  </div>
+  <br>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <div class="chat">
+          <table>
+            <tr *ngFor="let message of messages">
+              <table>
+                <div *ngIf="message.from_user==user" class="user">
+                  <tr> <td>{{message.message}}</td></tr>
+                  <tr><td>{{message.date| date: "dd.MM.yyyy HH:mm:ss"}}</td></tr>
+                  <tr><td *ngIf="message.seen==1"class="seen">Seen</td></tr>
+                </div>
+                <div *ngIf="message.from_user!=user" class="not-user">
+                  <tr><td>{{message.message}}</td></tr>
+                  <tr><td>{{message.date| date: "dd.MM.yyyy HH:mm:ss"}}</td></tr>
+                </div>
+              </table>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class="users">
+        <div>
+        <strong>Online users</strong>
+          <table>
+            <tr *ngFor="let user3 of users">
+              <td *ngIf="user3.online">{{user3.name}}</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class = "width-400">
+    <button (click)="decrese()"><</button>
+    <a class="typing" *ngIf="typing">Typing...</a>
+    <button class="padding" (click)="increase()">></button>
+  </div>
+    <input [(ngModel)]="text" class="width" (keydown)="keyDown($event)">
+    <button (click)="sendMessage()" class="green">Send</button>
+</div>
